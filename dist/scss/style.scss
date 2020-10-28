@@ -1,0 +1,23 @@
+@import './mixin';
+@import './variables';
+@import './pre';
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font: {
+		size: 62.5%;
+		family: 'Roboto', sans-serif;
+	}
+	height: 100%;
+	scroll-behavior: smooth;
+}
+@import './header';
+section {
+	width: 100%;
+}
+@import './main';
+@import './footer';
+@import './responsive';

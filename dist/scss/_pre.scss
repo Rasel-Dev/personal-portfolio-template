@@ -1,0 +1,113 @@
+.container {
+	@include align-lg;
+}
+.text-light {
+	color: $text-light;
+}
+.text-teal {
+	color: $text-teal;
+}
+.text-gray {
+	color: $text-gray;
+}
+.text-center {
+	text-align: center;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	.row-item {
+		flex: 30%;
+	}
+}
+.flex {
+	@include flexBetween;
+}
+.flex-around {
+	@include flexAround;
+}
+.grid-center {
+	display: grid;
+	place-items: center;
+}
+.m-1 {
+	margin: 1rem;
+}
+.mb-5 {
+	margin-bottom: 5rem;
+}
+.mb-1 {
+	margin-bottom: 1rem;
+}
+.p-2 {
+	padding: 2rem;
+}
+.p-5 {
+	padding: 5rem;
+}
+.pb-5 {
+	padding-bottom: 5rem;
+}
+.font-3 {
+	font-size: 3rem;
+}
+.font-1 {
+	font-size: 1.8rem;
+}
+.pb-10 {
+	padding-bottom: 10rem;
+}
+.bg-blue {
+	background-color: $bg-blue;
+}
+.bg-teal {
+	background-color: $bg-teal;
+}
+.bg-gray {
+	background-color: $bg-gray;
+}
+.bg-cloud {
+	background-color: $bg-cloud;
+}
+.clear {
+	clear: both;
+}
+.btn-btn {
+	padding: 0.8rem 2rem;
+	border-radius: 10rem;
+}
+.btn-btn-active {
+	color: $text-light;
+	background-color: $bg-orange;
+	&:hover.btn-btn-hover {
+		color: $text-dark;
+	}
+}
+.btn-btn-active-shadow {
+	box-shadow: 0px 2px 20px $bg-orange-400;
+}
+.inline-block {
+	display: inline-block;
+}
+.block {
+	display: block;
+}
+.after-border::before {
+	position: absolute;
+	content: '';
+	bottom: -10px;
+	width: 40%;
+	height: 5px;
+	background-color: #fff;
+	border-radius: 50px;
+}
+.p-r {
+	position: relative;
+}
+.p-a {
+	position: absolute;
+}
+.bg-yellow {
+	color: $text-dark;
+	background-color: $bg-yellow;
+}

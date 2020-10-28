@@ -1,0 +1,109 @@
+@media (max-width: 998px) {
+	html {
+		font-size: 55%;
+	}
+	.container {
+		width: 100%;
+	}
+	.header-container {
+		.header-logo {
+			flex: 40% !important;
+		}
+		.header-nav {
+			flex: 60% !important;
+			align-self: right;
+		}
+	}
+	.row {
+		.row-item {
+			flex: 40%;
+		}
+	}
+}
+@media (max-width: 768px) {
+	html {
+		font-size: 45%;
+	}
+	.header-container {
+		.header-nav {
+			flex: 100% !important;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			overflow: hidden;
+			height: 100%;
+			background-color: #fff;
+			ul {
+				display: block;
+				width: 100%;
+				padding-top: 10rem;
+				li {
+					float: none !important;
+					margin: 0 !important;
+					a {
+						display: block;
+						padding: 3rem 10rem;
+					}
+					&.nav-sub {
+						position: relative;
+						ul {
+							position: absolute;
+							top: 4rem;
+							left: -4rem;
+							opacity: 0;
+							visibility: hidden;
+							transform: translateY(2rem);
+							width: 15rem;
+							padding: 0 1rem;
+							background-color: $bg-orange;
+							border-radius: 5px;
+							transition: opacity 0.5s, transform 0.5s;
+							box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.22);
+							li {
+								float: none;
+								margin: 0;
+								border-bottom: 1px solid $bg-orange-400;
+								a {
+									padding: 1rem;
+									display: block;
+									color: $text-light;
+									&:hover {
+										color: $text-dark;
+									}
+								}
+								&:last-of-type {
+									border-bottom: 0;
+								}
+								&::before {
+									position: absolute;
+									content: '';
+									top: -1.6rem;
+									left: 6.5rem;
+									border-width: 0.8rem;
+									border-style: solid;
+									border-color: transparent transparent
+										$bg-orange transparent;
+								}
+							}
+						}
+						&.active-sub {
+							ul {
+								opacity: 1;
+								visibility: visible;
+								transform: translateY(0rem);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.row {
+		flex-direction: column;
+		.row-item {
+			flex: 100%;
+		}
+	}
+}

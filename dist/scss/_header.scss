@@ -1,0 +1,108 @@
+header {
+	position: relative;
+	padding: 4rem;
+	background-color: $bg-light;
+	z-index: 999;
+	.header-container {
+		@include flexBetween;
+		font-size: 1.8rem !important;
+		.header-logo {
+			flex: 55%;
+			.logo-link {
+				text-decoration: none;
+				color: $text-dark;
+				// font-size: 3rem;
+			}
+		}
+		.header-nav {
+			flex: 45%;
+			ul {
+				list-style: none;
+				li {
+					float: left;
+					margin-left: 4rem;
+					a {
+						text-decoration: none;
+						color: $text-dark;
+						font-weight: 500;
+						transition: color 0.3s;
+						&.hire {
+							position: relative;
+							color: $text-light;
+							transition: all 0.5s;
+							&:hover {
+								color: $text-dark;
+								box-shadow: 0px 2px 15px $bg-orange-400;
+							}
+						}
+						&:hover {
+							color: $text-orange;
+						}
+					}
+					&.nav-sub {
+						position: relative;
+						ul {
+							position: absolute;
+							top: 4rem;
+							left: -4rem;
+							opacity: 0;
+							visibility: hidden;
+							transform: translateY(2rem);
+							width: 15rem;
+							padding: 0 1rem;
+							background-color: $bg-orange;
+							border-radius: 5px;
+							transition: opacity 0.5s, transform 0.5s;
+							box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.22);
+							li {
+								float: none;
+								margin: 0;
+								border-bottom: 1px solid $bg-orange-400;
+								a {
+									padding: 1rem;
+									display: block;
+									color: $text-light;
+									&:hover {
+										color: $text-dark;
+									}
+								}
+								&:last-of-type {
+									border-bottom: 0;
+								}
+								&::before {
+									position: absolute;
+									content: '';
+									top: -1.6rem;
+									left: 6.5rem;
+									border-width: 0.8rem;
+									border-style: solid;
+									border-color: transparent transparent
+										$bg-orange transparent;
+								}
+							}
+						}
+						&.active-sub {
+							ul {
+								opacity: 1;
+								visibility: visible;
+								transform: translateY(0rem);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.header-scrolled {
+	position: fixed;
+	width: 100%;
+	padding: 2rem;
+	box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.22);
+	transition: padding 0.5s, box-shadow 0.5s;
+	.header-logo {
+		.logo-link {
+			font-size: 3rem !important;
+		}
+	}
+}

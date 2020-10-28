@@ -1,0 +1,15 @@
+@mixin flexBetween {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+@mixin flexAround {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+@mixin align-lg {
+	margin: 0 auto;
+	width: 1170px;
+}

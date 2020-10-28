@@ -1,0 +1,180 @@
+.hero-first {
+	flex: 50%;
+	padding-left: 10rem;
+	small {
+		font-size: 1.8rem;
+		color: #ff393d;
+		&:last-of-type {
+			color: #2a77f3;
+			font-weight: 600;
+		}
+	}
+	h1 {
+		margin: 1rem 0;
+		font-size: 10rem;
+		line-height: 9rem;
+		color: $text-dark-800;
+	}
+	div {
+		display: block;
+		font-size: 1.8rem !important;
+		margin-top: 3.5rem;
+		a {
+			text-decoration: none;
+			margin-right: 2rem;
+			&:last-of-type {
+				color: $text-orange;
+			}
+		}
+	}
+}
+.hero-second {
+	flex: 50%;
+}
+.sc__middle {
+	overflow: hidden;
+	.service-item {
+		// max-width: 30% !important;
+		padding: 2.5rem;
+		font-size: 1.5rem;
+		background-color: $bg-light;
+		border-radius: 1rem;
+		box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+		h1 {
+			text-transform: capitalize;
+		}
+		overflow: hidden;
+	}
+}
+.flex-left {
+	flex: 50%;
+}
+.flex-right {
+	flex: 50%;
+}
+.tr_middle {
+	.skill {
+		.flex-right {
+			.skill-item {
+				width: 13rem;
+				height: 5rem;
+				line-height: 5rem;
+			}
+			.skill-progress {
+				width: 100%;
+				.progress-bar {
+					width: 100%;
+					background-color: $bg-light;
+					.progress {
+						position: relative;
+						height: 0.5rem;
+						background-color: #696969;
+						.progress-tooltip {
+							height: 2rem;
+							line-height: 2rem;
+							position: absolute;
+							bottom: -0.7rem;
+							right: 0rem;
+							font-size: 1rem;
+							color: $text-light;
+							padding: 0 1rem;
+							background-color: #696969;
+							border-radius: 1.5rem;
+							transition: opacity 0.5s;
+						}
+					}
+				}
+			}
+
+			.skill-info:hover .skill-progress {
+				.progress-tooltip {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
+.tr_bottom {
+	.about_me {
+		font-size: 1.7rem;
+		line-height: 2.5rem;
+		h1 {
+			font: {
+				size: 5rem;
+				weight: bold;
+			}
+		}
+	}
+}
+.project {
+	.project-item {
+		border-radius: 1rem;
+		background-color: $bg-light;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 25rem;
+		}
+	}
+}
+.social {
+	a {
+		text-decoration: none;
+		width: 10rem;
+		height: 10rem;
+		float: left;
+		margin-right: 1rem;
+		display: grid;
+		place-items: center;
+		font-size: 4rem;
+		color: $text-light;
+		background-color: $bg-gray;
+		border-radius: 10rem;
+	}
+}
+.contact-form {
+	input {
+		display: block;
+		border: none;
+		outline: none;
+		font: {
+			size: 2rem;
+			family: 'Roboto', sans-serif;
+		}
+		margin-bottom: 2rem;
+		padding: 1.5rem;
+		width: 100%;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+	}
+	textarea {
+		display: block;
+		border: none;
+		outline: none;
+		font: {
+			size: 2rem;
+			family: 'Roboto', sans-serif;
+		}
+		margin-bottom: 1.5rem;
+		width: 100%;
+		padding: 1.5rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+		resize: none;
+	}
+	button {
+		display: block;
+		border: none;
+		outline: none;
+		font: {
+			size: 2rem;
+			family: 'Roboto', sans-serif;
+		}
+		margin-bottom: 1.5rem;
+		width: 20rem;
+		padding: 1.5rem;
+		color: $text-light;
+		background-color: $bg-dark;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+		cursor: pointer;
+	}
+}
